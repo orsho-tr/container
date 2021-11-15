@@ -26,6 +26,6 @@
   docker_image:
     name: hello-world
     build:
-      path: /home/orsho
+      path: /home/orsho/dockerApp
       source: build
     state: present
