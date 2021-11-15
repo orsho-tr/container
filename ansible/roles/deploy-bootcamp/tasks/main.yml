@@ -15,7 +15,7 @@
 
 - name: copy Dockerfile
   copy:
-    src: Dockerfile
+    src: ../Dockerfile
     dest: /home/orsho/dockerApp
     mode: '0644'
     #remote_src: yes
