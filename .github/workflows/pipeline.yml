@@ -48,7 +48,6 @@ jobs:
           #requirements: galaxy-requirements.yml
           # Optional, additional flags to pass to ansible-playbook
           options: |
-                --inventory ./ansible/inventory/prod.yml
-                --limit group1
+                --inventory ./inventory/prod.yml
                 --extra-vars hello=there
                 --verbose
