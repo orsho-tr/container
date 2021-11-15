@@ -1,0 +1,10 @@
+- name: testplaybook
+  become: true
+  hosts: webservers
+  vars:
+    java_packages:
+      - openjdk-8-jdk
+
+  roles:
+    - role: deploy-bootcamp
+      tags: ['deploy']
