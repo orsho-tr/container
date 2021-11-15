@@ -39,6 +39,10 @@ jobs:
           directory: ./ansible
           # Optional, SSH private key
           key: ${{secrets.SSH_PRIVATE_KEY}}
+
+          inventory: |
+            [webservers]
+
           # Optional, literal inventory file contents
           # Optional, SSH known hosts file content
           #known_hosts: .known_hosts
