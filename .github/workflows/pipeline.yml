@@ -27,27 +27,11 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run playbook
-        uses: dawidd6/action-ansible-playbook@v2
+        uses: arillso/action.playbook@master
         with:
-            # Required, playbook filepath
-          playbook: testplaybook.yml
-          # Optional, directory where playbooks live
-          directory: ./ansible
-          # Optional, SSH private key
-          key: ${{secrets.SSH_PRIVATE_KEY}}
-
-          # inventory: |
-          #   [webservers]
-          #known_hosts: .known_hosts
-          # Optional, literal inventory file contents
-          # Optional, SSH known hosts file content
-          #known_hosts: .known_hosts
-          # Optional, encrypted vault password
-          #vault_password: ${{secrets.VAULT_PASSWORD}}
-          # Optional, galaxy requirements filepath
-          #requirements: galaxy-requirements.yml
-          # Optional, additional flags to pass to ansible-playbook
-          options: |
-                --inventory ./inventory/prod.yml
-                --extra-vars hello=there
-                --verbose
+            playbook: ansible/testplaybook.yml
+            inventory: ansible/inventory/prod.yml
+            private_key: ${{secrets.SSH_PRIVATE_KEY}}
+            user: orsho
+            
+  
