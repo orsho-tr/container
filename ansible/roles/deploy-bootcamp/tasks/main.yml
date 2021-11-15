@@ -15,8 +15,8 @@
 
 - name: copy Dockerfile
   copy:
-    src: ./Dockerfile
-    dest: /home/orsho/Dockerfile
+    src: Dockerfile
+    dest: /home/orsho/dockerApp
     owner: root
     group: root
     mode: '0644'
