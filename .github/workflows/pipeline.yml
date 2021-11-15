@@ -38,7 +38,7 @@ jobs:
 
           # inventory: |
           #   [webservers]
-
+          known_hosts: .known_hosts
           # Optional, literal inventory file contents
           # Optional, SSH known hosts file content
           #known_hosts: .known_hosts
