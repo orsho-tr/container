@@ -36,8 +36,8 @@ jobs:
           # Optional, SSH private key
           key: ${{secrets.SSH_PRIVATE_KEY}}
 
-          inventory: |
-            [webservers]
+          # inventory: |
+          #   [webservers]
 
           # Optional, literal inventory file contents
           # Optional, SSH known hosts file content
@@ -48,7 +48,7 @@ jobs:
           #requirements: galaxy-requirements.yml
           # Optional, additional flags to pass to ansible-playbook
           options: |
-                --inventory ./inventory/prod.yml
+                --inventory ./ansible/inventory/prod.yml
                 --limit group1
                 --extra-vars hello=there
                 --verbose
