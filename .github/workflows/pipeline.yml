@@ -52,7 +52,7 @@ jobs:
           #requirements: galaxy-requirements.yml
           # Optional, additional flags to pass to ansible-playbook
           options: |
-              --inventory .webservers
+              --inventory .prod
               --limit group1
               --extra-vars hello=there
               --verbose
