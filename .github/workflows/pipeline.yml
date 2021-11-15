@@ -32,6 +32,7 @@ jobs:
             playbook: ansible/testplaybook.yml
             inventory: ansible/inventory/prod.yml
             private_key: ${{secrets.SSH_PRIVATE_KEY}}
-            user: orsho
-            become_user: true
-  
+            user: orsho 
+        env:
+            ANSIBLE_HOST_KEY_CHECKING: 'false'
+            ANSIBLE_DEPRECATION_WARNINGS: 'false'
